@@ -19,8 +19,7 @@
     "grunt-contrib-less": "~0.8.2",
     "grunt-contrib-watch": "~0.5.2",
     "load-grunt-tasks": "~0.2.0",
-    "time-grunt": "~0.2.3",
-    "grunt-requiregen": "~0.1.0"
+    "time-grunt": "~0.2.3"
   },
   "engines": {
     "node": "0.10.x",

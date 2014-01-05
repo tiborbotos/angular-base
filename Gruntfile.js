@@ -3,6 +3,7 @@
   module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
+    
     grunt.initConfig({
       bower: {
         install: {
@@ -29,7 +30,7 @@
         options: {
           base: 'app/',
           livereload: 12312,
-          // middleware: require('./middleware'), uncomment if you need a middleware
+          middleware: require('./scripts/middleware'),
           open: true,
           port: 8080
         },
@@ -49,19 +50,15 @@
             nospawn: true
           }
         },
-      },
+      }
     });
     
     grunt.registerTask('server', function (target) {
-      if (target === 'dist') {
+      if (target === 'dist') { // no watch
         return grunt.task.run(['less', 'connect:dist:keepalive']);
       }
 
-      grunt.task.run([
-        'less',
-        'connect:livereload',
-        'watch'
-      ]);
+      grunt.task.run(['less','connect:livereload','watch']);
     });
   
     return grunt.registerTask('default', []);
