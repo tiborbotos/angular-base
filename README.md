@@ -38,3 +38,11 @@ Not yet added
 
 ## To-Do
 * Setup tests
+* Introduce localization
+* Enhance angular routing mechanism
+* Introduce service/factory generic solution
+
+## Thanks
+I stole some idea and solution, thank you guys!
+* angular-requirejs-seed (https://github.com/pheno7/angular-requirejs-seed)
+* AngularFun (https://github.com/CaryLandholt/AngularFun)
